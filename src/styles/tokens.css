@@ -1,0 +1,228 @@
+/* ============================================================
+   ANN SETU — DESIGN TOKENS
+   Single source of truth. Never hard-code a raw value in a
+   component; always reference a token from this file.
+   ============================================================ */
+
+:root {
+  /* ---------- 1. BRAND / COLOR ---------------------------- */
+  /* Primary — "Harvest Green": trust + sustainability */
+  --green-50:  #EAF7F0;
+  --green-100: #D2EDE0;
+  --green-200: #A6DBc3;
+  --green-300: #6FC69F;
+  --green-400: #35A87A;
+  --green-500: #12855B;
+  --green-600: #0E7A54; /* primary action */
+  --green-700: #0A6244;
+  --green-800: #084D36;
+  --green-900: #06382a;
+
+  /* Neutrals — very light, slightly green-tinted so white never looks blue */
+  --white:    #FFFFFF;
+  --canvas:   #FAFBF9;   /* app background */
+  --surface:  #FFFFFF;   /* cards */
+  --subtle:   #F3F6F4;   /* inset / secondary fills */
+  --subtle-2: #EDF1EF;
+  --line:     #E3E8E5;   /* default border */
+  --line-strong: #CFD8D3;
+  --ink-900:  #0D1A15;   /* headings */
+  --ink-700:  #24352E;   /* body */
+  --ink-500:  #5A6B64;   /* muted text  */
+  --ink-400:  #7D8C86;   /* placeholder */
+  --ink-300:  #A7B3AE;
+
+  /* Semantic */
+  --success:      #0E7A54;
+  --success-bg:   #EAF7F0;
+  --success-line: #B9E2CE;
+  --warning:      #9A5B00;
+  --warning-bg:   #FDF3E2;
+  --warning-line: #F3D9A8;
+  --danger:       #B42318;
+  --danger-bg:    #FDECEA;
+  --danger-line:  #F5C4BF;
+  --info:         #1B4FD8;
+  --info-bg:      #EDF2FE;
+  --info-line:    #C4D3F8;
+  --neutral:      #5A6B64;
+  --neutral-bg:   #F3F6F4;
+  --neutral-line: #DDE4E1;
+  --accent-gold:  #B57A00; /* "prototype data" ribbon */
+
+  /* Chart series — colour-blind checked, ordered for adjacency */
+  --chart-1: #0E7A54;
+  --chart-2: #35A87A;
+  --chart-3: #86E0B0;
+  --chart-4: #1B4FD8;
+  --chart-5: #7C6CF0;
+  --chart-6: #E8A33D;
+
+  /* ---------- 2. TYPOGRAPHY ------------------------------- */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-deva: "Noto Sans Devanagari", "Nirmala UI", "Mangal", "Kohinoor Devanagari", var(--font-sans);
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Menlo, monospace;
+
+  /* Type scale — 1.22 modular, clamped for fluid screens */
+  --fs-11: 0.6875rem; /* 11px  micro / table meta */
+  --fs-12: 0.75rem;   /* 12px  caption, badge */
+  --fs-13: 0.8125rem; /* 13px  helper, table cell */
+  --fs-14: 0.875rem;  /* 14px  body small, UI default */
+  --fs-16: 1rem;      /* 16px  body */
+  --fs-18: 1.125rem;  /* 18px  card title */
+  --fs-20: 1.25rem;   /* 20px  section title */
+  --fs-24: 1.5rem;    /* 24px  page title */
+  --fs-30: clamp(1.5rem, 1.2rem + 1.1vw, 1.875rem);
+  --fs-38: clamp(1.75rem, 1.3rem + 2vw, 2.375rem);
+  --fs-48: clamp(2rem, 1.3rem + 3.2vw, 3rem);
+  --fs-60: clamp(2.25rem, 1.2rem + 4.6vw, 3.75rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.32;
+  --lh-normal: 1.55;
+  --ls-tight: -0.02em;
+  --ls-wide: 0.06em;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---------- 3. SPACING (4px base) ----------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 32px;
+  --s-8: 40px;
+  --s-9: 48px;
+  --s-10: 64px;
+  --s-11: 80px;
+  --s-12: 96px;
+  --s-13: 128px;
+
+  /* ---------- 4. RADIUS ----------------------------------- */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* ---------- 5. ELEVATION -------------------------------- */
+  --sh-xs: 0 1px 2px rgba(13, 26, 21, 0.05);
+  --sh-sm: 0 1px 3px rgba(13, 26, 21, 0.06), 0 1px 2px rgba(13, 26, 21, 0.04);
+  --sh-md: 0 4px 12px -2px rgba(13, 26, 21, 0.08), 0 2px 6px -2px rgba(13, 26, 21, 0.05);
+  --sh-lg: 0 12px 28px -8px rgba(13, 26, 21, 0.16), 0 4px 10px -4px rgba(13, 26, 21, 0.08);
+  --sh-xl: 0 24px 56px -16px rgba(13, 26, 21, 0.22);
+  --ring: 0 0 0 3px rgba(14, 122, 84, 0.24);
+  --ring-danger: 0 0 0 3px rgba(180, 35, 24, 0.2);
+
+  /* ---------- 6. LAYOUT ----------------------------------- */
+  --shell-sidebar: 264px;
+  --shell-sidebar-collapsed: 76px;
+  --shell-topbar: 64px;
+  --content-max: 1280px;
+  --prose-max: 68ch;
+  --grid-gutter: var(--s-5);
+  --tap-min: 44px;      /* WCAG touch target */
+  --control-h: 42px;    /* default input height */
+  --z-sticky: 20;
+  --z-sidebar: 40;
+  --z-overlay: 60;
+  --z-modal: 70;
+  --z-toast: 90;
+
+  /* ---------- 7. MOTION ----------------------------------- */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 280ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 1ms; --dur-base: 1ms; --dur-slow: 1ms; }
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
+}
+
+/* ============================================================
+   RESET / BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink-700);
+  font-family: var(--font-sans);
+  font-size: var(--fs-14);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01";
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--ink-900);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+}
+h1 { font-size: var(--fs-30); }
+h2 { font-size: var(--fs-24); }
+h3 { font-size: var(--fs-18); }
+h4 { font-size: var(--fs-16); }
+p  { margin: 0; }
+
+a { color: var(--green-700); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+img, svg, video { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: none; padding: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+table { border-collapse: collapse; width: 100%; }
+hr { border: none; border-top: 1px solid var(--line); margin: var(--s-5) 0; }
+
+.deva { font-family: var(--font-deva); }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.num  { font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+
+/* Focus — always visible, never removed */
+:focus-visible {
+  outline: 2px solid var(--green-600);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: var(--s-4); top: -60px;
+  z-index: 100; background: var(--green-600); color: #fff;
+  padding: 10px 16px; border-radius: var(--r-sm);
+  font-weight: var(--fw-semibold); transition: top var(--dur-base);
+}
+.skip-link:focus { top: var(--s-4); }
+
+::selection { background: var(--green-100); color: var(--green-900); }
+
+/* Thin, unobtrusive scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--line-strong); border-radius: var(--r-full);
+  border: 3px solid transparent; background-clip: content-box;
+}
